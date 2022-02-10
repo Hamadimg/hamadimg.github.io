@@ -1,0 +1,18 @@
+body{
+    background-color: cyan;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    font-size: 100px;
+}
+.border{
+    border-style: dotted;
+    border-width: 10px;
+    border-color: magenta;
+}
+.right{
+    float: right;
+}
+span{
+    background-color: yellow;
+}
