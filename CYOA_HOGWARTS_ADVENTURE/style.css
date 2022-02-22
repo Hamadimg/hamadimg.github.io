@@ -1,0 +1,88 @@
+@font-face {
+        font-family: wizardFont;
+        src: url(WizardWorldSimplified-Kxr7.ttf);
+}
+html{
+        overflow: hidden;
+        font-family: wizardFont;
+}
+.background{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        -webkit-filter: blur(20px); /* Safari 6.0 - 9.0 */
+        filter: brightness(50%) blur(10px);
+        box-shadow: 0 0 100px 100px rgb(212, 30, 30) inset;
+
+}
+.center{
+        font-family: wizardFont;
+        color: white;
+        text-align: center;
+}
+.greeting{
+        font-size: 100px;
+        text-shadow: 5px 5px black;
+}
+
+.intro{
+
+        font-size: 30px;
+}
+.boldfont{
+        font-size: 50px;
+}
+.break{
+        margin: 5%;
+}
+.glow{
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffca39, 0 0 40px #fadd5c, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+        }
+        to {
+          text-shadow: 0 0 20px #fff, 0 0 30px #f5ce22, 0 0 40px #b88008, 0 0 50px #dad602, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+        }
+      }
+
+.formpadding{
+        margin-top: 5em;
+}
+.prof{
+        width: 500px;
+        height: 500px;
+}
+.grid{
+        display: inline-block;
+}
+footer{
+        position: absolute;
+        bottom: 0;
+}
+footer > a > button{
+        height:50px;
+        width:100px;
+        font-family: wizardFont;
+}
+.highlight{
+        border-style: dashed;
+        border-color: aqua;
+}
+.flex{
+        display: flex;
+        margin-left: 10%;
+}
+.lesson{
+        width: 200px;
+        height: 200px;
+}
+.list{
+        font-size: 25px;
+}
