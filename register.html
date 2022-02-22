@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <title>Register</title>
+</head>
+<body>
+    <div class="center">
+        <h1 class="promt">Before you can train and compete <br> please tell us about you</h1>
+    </div>
+    <div>
+        <img class="background" src="img/hogwarts.jpg" alt="hogwarts">
+    </div>
+    <div class="center" >
+        <form action="/orientation.html" class="formpadding">
+            <label for="fname" class="formpadding" >Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <p class="formpadding">What is your gender:</p>
+            <input type="checkbox" class="radio " name="gender" value="boy">
+            <label for="male" id="male">Male</label>
+            <input type="checkbox" class="radio"name="gender" value="girl">
+            <label for="female"  id="male">Female</label><br> <br>
+            <label for="house" class="formpadding">House:</label>
+            <select class="formpadding" name="house" id="house" >
+                <option value="Gryffindor">Gryffindor</option>
+                <option value="Hufflepuff">Hufflepuff</option>
+                <option value="Ravenclaw">Ravenclaw</option>
+                <option value="Slytherin">Slytherin</option>
+            </select> <br>
+            <input class="formpadding" type="submit" onclick="getFormData()" id="submit" value="Submit">
+        </form>
+        <script>
+            // Script to make checkboxes exclusive
+            // source: https://stackoverflow.com/questions/9709209/html-select-only-one-checkbox-in-a-group/9709425#9709425
+            // the selector will match all input controls of type :checkbox
+            // and attach a click event handler 
+            $("input:checkbox").on('click', function() {
+                // in the handler, 'this' refers to the box clicked on
+                var $box = $(this);
+                if ($box.is(":checked")) {
+                // the name of the box is retrieved using the .attr() method
+                // as it is assumed and expected to be immutable
+                var group = "input:checkbox[name='" + $box.attr("name") + "']";
+                // the checked state of the group/box on the other hand will change
+                // and the current value is retrieved using .prop() method
+                $(group).prop("checked", false);
+                $box.prop("checked", true);
+                } else {
+                $box.prop("checked", false);
+                }
+            });
+        </script>
+    </div>
+    <footer>
+        <a href="index.html"> <button> Start Over</button></a>
+    </footer>
+</body>
+</html>
