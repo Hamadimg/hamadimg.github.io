@@ -3,7 +3,7 @@
         src: url(WizardWorldSimplified-Kxr7.ttf);
 }
 html{
-        overflow: scroll;
+        overflow: auto;
         font-family: wizardFont;
 }
 .background{
