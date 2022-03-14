@@ -5,6 +5,7 @@
 html{
         overflow: auto;
         font-family: wizardFont;
+        background-color: black;
 }
 .background{
         position: absolute;
